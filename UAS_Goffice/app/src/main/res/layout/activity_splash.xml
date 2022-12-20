@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="Activities.SplashActivity">
+    tools:context=".SplashActivity">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
-        android:background=""
+        android:background="#332FD0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,13 +42,13 @@
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#3E3E3E"
+        android:background="#332FD0"
         android:fontFamily="sans-serif-condensed"
         android:gravity="center_horizontal"
         android:padding="8dp"
-        android:text="SK FOOTBALL"
+        android:text="GOFFICE"
         android:textColor="#E3E3E3"
-        android:textSize="32sp"
+        android:textSize="56sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
