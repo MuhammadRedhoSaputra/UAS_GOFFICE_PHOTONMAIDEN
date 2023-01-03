@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.FeedBackActivity"
+    android:background="#377DFF"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/iv_logoUs"
+        android:layout_width="356dp"
+        android:layout_height="110dp"
+        android:adjustViewBounds="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo_goffice" />
+
+    <TextView
+        android:id="@+id/tv_feed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Goffice FeedBack"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:layout_below="@id/iv_logoUs"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-condensed-light"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_email"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_feed"
+        android:layout_marginTop="75sp"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="8dp"
+        android:background="#E3E3E3">
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E3E3E3"
+            android:text="kgsmammaryazid@mhs.mdp.ac.id ivanlaksono@mhs.mdp.ac.id mredhosaputra@mhs.mdp.ac.id "
+            android:textColor="@color/black"
+            android:enabled="false"
+            android:padding="8dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_feedback"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="65sp"
+        android:layout_below="@id/cv_email"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="8dp"
+        android:background="#E3E3E3">
+
+        <EditText
+            android:id="@+id/et_feedback"
+            style="italic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E3E3E3"
+            android:hint="Your Feedback.."
+            android:padding="8dp"
+            android:gravity="top"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"/>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cv_feedback"
+        android:layout_centerInParent="true"
+        android:layout_marginVertical="25dp"
+        android:background="#377DFF"
+        android:text="Submit"
+        android:textSize="18sp" />
+</RelativeLayout>
