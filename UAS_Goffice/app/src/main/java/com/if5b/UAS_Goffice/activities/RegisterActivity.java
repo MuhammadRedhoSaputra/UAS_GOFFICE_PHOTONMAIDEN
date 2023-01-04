@@ -34,21 +34,30 @@ public class RegisterActivity extends AppCompatActivity {
         binding = ActivityRegisterBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-
         mAuth = FirebaseAuth.getInstance();
 
         binding.btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String username = binding.etUsername.getText().toString();
                 String email = binding.etRegEmail.getText().toString();
+                String notelephone = binding.etNoTelephone.getText().toString();
                 String password = binding.etRegPass.getText().toString();
 
+                if (TextUtils.isEmpty(username)) {
+                    binding.etUsername.setError("UserName jangan Kosong");
+                    binding.etUsername.requestFocus();
+                }
                 if (TextUtils.isEmpty(email)) {
-                    binding.etRegEmail.setError("Email cannot be empty");
+                    binding.etRegEmail.setError("Email jangan Kosong");
                     binding.etRegEmail.requestFocus();
                 }
+                if (TextUtils.isEmpty(notelephone)) {
+                    binding.etNoTelephone.setError("Nomor Telephone jangan Kosong");
+                    binding.etNoTelephone.requestFocus();
+                }
                 if (TextUtils.isEmpty(password)) {
-                    binding.etRegPass.setError("Password cannot be empty");
+                    binding.etRegPass.setError("Password jangan Kosong");
                     binding.etRegPass.requestFocus();
                 } else {
                     mAuth.createUserWithEmailAndPassword(email, password)
