@@ -3,6 +3,7 @@ package com.if5b.UAS_Goffice.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -18,15 +19,20 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.if5b.UAS_Goffice.R;
 import com.if5b.UAS_Goffice.databinding.ActivityRegisterBinding;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class RegisterActivity extends AppCompatActivity {
 
     private ActivityRegisterBinding binding;
-
-
+    FirebaseFirestore fstore;
     FirebaseAuth mAuth;
+    String userID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +41,7 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         mAuth = FirebaseAuth.getInstance();
-
+        fstore = FirebaseFirestore.getInstance();
         binding.btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -66,6 +72,18 @@ public class RegisterActivity extends AppCompatActivity {
                                 public void onSuccess(AuthResult authResult) {
                                     startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
                                     Toast.makeText(RegisterActivity.this, "Register Berhasil!", Toast.LENGTH_SHORT).show();
+                                    userID = mAuth.getCurrentUser().getUid();
+                                    DocumentReference documentReference = fstore.collection("Users").document(userID);
+                                    Map<String, Object> user = new HashMap<>();
+                                    user.put("username", username);
+                                    user.put("notelephone", notelephone);
+                                    user.put("email", email);
+                                    documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                        @Override
+                                        public void onSuccess(Void unused) {
+                                            Toast.makeText(RegisterActivity.this, "Username Telah di buat", Toast.LENGTH_SHORT).show();
+                                        }
+                                    });
                                 }
                             })
                             .addOnFailureListener(new OnFailureListener() {
