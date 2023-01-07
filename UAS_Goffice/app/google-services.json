@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "754639206205",
+    "project_id": "uas-goffice",
+    "storage_bucket": "uas-goffice.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:754639206205:android:636915d2ce859c2364b754",
+        "android_client_info": {
+          "package_name": "com.if5b.UAS_Goffice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "754639206205-qkkeftpotaf9nqnb7cfshimofjnreddc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnjgx8P6vZnQ4S_jPtxJ3JLX-0QfKkb6M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "754639206205-qkkeftpotaf9nqnb7cfshimofjnreddc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
