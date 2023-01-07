@@ -22,10 +22,8 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-
         btnLogOut = findViewById(R.id.btnLogout);
         mAuth = FirebaseAuth.getInstance();
-
         btnLogOut.setOnClickListener(view ->{
             mAuth.signOut();
             startActivity(new Intent(ProfileActivity.this, LoginActivity.class));
