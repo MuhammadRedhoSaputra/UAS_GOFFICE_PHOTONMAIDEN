@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Goffice</string>
+
+    //Headings
+    <string name="heading_one">Chatting antar rekan kantor</string>
+    <string name="heading_two">Manajemen Absensi</string>
+    <string name="heading_three">Riwayat Kerja Pribadi</string>
+    <string name="heading_fourth">Mari Bekerja Dengan Baik</string>
+
+    //Description
+    <string name="desc_one">Fitur chatting antar kantor pribadi</string>
+    <string name="desc_two">Mempermudah absensi online di aplikasi ini</string>
+    <string name="desc_three">Menambah pengalaman kerja pribadi</string>
+    <string name="desc_fourth">Untuk masa depan yang lebih baik</string>
+
+    //BOTTOM NAVIGATION MENU
+    <string name="lbl_home">Home</string>
+    <string name="lbl_profile">Profile</string>
+    <string name="lbl_feedback">Feedback</string>
+
+</resources>
