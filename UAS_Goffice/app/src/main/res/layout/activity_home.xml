@@ -51,7 +51,7 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:clickable="true"
-                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/background"
                 app:cardCornerRadius="16dp">
 
                 <LinearLayout
@@ -74,7 +74,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="Absen Masuk"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
@@ -89,7 +89,7 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:clickable="true"
-                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/background"
                 app:cardCornerRadius="16dp">
 
                 <LinearLayout
@@ -111,7 +111,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="Absen Keluar"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
@@ -136,7 +136,7 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:clickable="true"
-                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/background"
                 app:cardCornerRadius="16dp">
 
                 <LinearLayout
@@ -159,7 +159,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="0dp"
                         android:text="Absen Izin/Sakit"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 

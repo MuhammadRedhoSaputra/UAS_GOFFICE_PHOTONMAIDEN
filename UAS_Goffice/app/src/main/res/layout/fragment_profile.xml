@@ -25,7 +25,7 @@
         android:layout_height="150dp"
         android:layout_marginTop="70dp"
         android:layout_centerHorizontal="true"
-        app:lottie_rawRes="@raw/goffice"
+        app:lottie_rawRes="@raw/goffice2"
         app:lottie_loop="true"
         app:lottie_autoPlay="true"
         tools:ignore="MissingClass" />
@@ -45,7 +45,7 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:clickable="true"
-                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/background"
                 app:cardCornerRadius="16dp">
 
                 <LinearLayout
@@ -61,16 +61,16 @@
                         android:layout_marginTop="10dp"
                         android:background="#377DFF"
                         android:padding="10dp"
-                        android:src="@drawable/image3" />
+                        android:src="@drawable/image3"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="0dp"
                         android:text="Profile"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"/>
 
                 </LinearLayout>
 
@@ -93,7 +93,7 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:clickable="true"
-            android:foreground="?attr/selectableItemBackground"
+            app:cardBackgroundColor="@color/background"
             app:cardCornerRadius="16dp">
 
             <LinearLayout
@@ -116,7 +116,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="0dp"
                     android:text="About US"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 

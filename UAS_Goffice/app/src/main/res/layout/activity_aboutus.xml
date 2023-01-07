@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AboutusActivity"
+    android:background="@color/background"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/iv_logoUs"
+        android:layout_width="356dp"
+        android:layout_height="110dp"
+        android:adjustViewBounds="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo_goffice" />
+
+    <TextView
+        android:id="@+id/tv_feed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_logoUs"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="Goffice US"
+        android:textColor="@color/white"
+        android:textSize="32sp" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_about"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/tv_feed"
+        android:layout_marginTop="10sp"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="@color/white">
+        
+        <com.denzcoskun.imageslider.ImageSlider
+            android:id="@+id/is_about"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:iss_period="1000"
+            app:iss_auto_cycle="true"
+            app:iss_delay="1000"
+            app:iss_corner_radius="20"
+            app:iss_title_background="@color/white"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_about2"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cv_about"
+        android:layout_marginTop="30sp"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="8dp"
+        android:background="#E3E3E3">
+
+        <EditText
+            android:id="@+id/et_about2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E3E3E3"
+            android:text="Project PhotonMaiden \n\nKetua : \nMuhammad Redho Saputra \n\nAnggota :\nIvan Luthfi Laksono\nKgs M Ammar Yazid"
+            android:textColor="@color/black"
+            android:enabled="false"
+            android:padding="8dp" />
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
