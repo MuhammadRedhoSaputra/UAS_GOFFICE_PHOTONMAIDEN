@@ -45,6 +45,7 @@
             android:textColor="@color/white"
             android:text="Redho Ganteng" />
 
+
     </LinearLayout>
 
     <LinearLayout
@@ -69,7 +70,7 @@
             android:layout_height="wrap_content"
             android:textSize="14sp"
             android:textColor="@color/white"
-            android:text="Tanggal          : " />
+            android:text="Tanggal           : " />
 
         <TextView
             android:id="@+id/tv_Tanggal"

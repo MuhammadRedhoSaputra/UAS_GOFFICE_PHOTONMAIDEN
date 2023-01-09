@@ -13,6 +13,7 @@ import com.if5b.UAS_Goffice.R;
 import com.if5b.UAS_Goffice.activities.IzinActivity;
 import com.if5b.UAS_Goffice.activities.KeluarActivity;
 import com.if5b.UAS_Goffice.activities.MasukActivity;
+import com.if5b.UAS_Goffice.activities.PostActivity;
 
 public class HomeFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
@@ -65,6 +66,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), MasukActivity.class);
+                intent.putExtra(MasukActivity.Typedata, "Masuk");
                 startActivity(intent);
             }
         });
@@ -72,7 +74,8 @@ public class HomeFragment extends Fragment {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), KeluarActivity.class);
+                Intent intent = new Intent(getActivity(), MasukActivity.class);
+                intent.putExtra(MasukActivity.Typedata, "Keluar");
                 startActivity(intent);
             }
         });
@@ -80,7 +83,8 @@ public class HomeFragment extends Fragment {
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), IzinActivity.class);
+                Intent intent = new Intent(getActivity(), MasukActivity.class);
+                intent.putExtra(MasukActivity.Typedata, "Izin");
                 startActivity(intent);
             }
         });

@@ -35,6 +35,7 @@ public class AbsenAdapter extends RecyclerView.Adapter<AbsenAdapter.ViewHolder> 
         holder.tvTanggal.setText(absen.getTanggal());
         holder.tvWaktu.setText(absen.getWaktu());
         holder.tvKet.setText(absen.getKeterangan());
+
     }
 
     @Override
@@ -50,6 +51,7 @@ public class AbsenAdapter extends RecyclerView.Adapter<AbsenAdapter.ViewHolder> 
             tvTanggal=itemView.findViewById(R.id.tv_Tanggal);
             tvWaktu=itemView.findViewById(R.id.tv_Waktu);
             tvKet=itemView.findViewById(R.id.tv_Ket);
+
         }
     }
 }
